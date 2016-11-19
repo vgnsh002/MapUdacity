@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name=viewport content="width=device-width, initial-scale=1">
+      <title>Madurai IN and OUT</title>
+      <link href="css/style_min.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900" rel="stylesheet" > <!--Removed Type Attributes-->
+      <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,900" rel="stylesheet" > <!--Removed Type Attributes-->
+   </head>
+   <body>
+     <div class="container">
+      <div class="row-Header">
+         <div class="column-Header">
+            <h1> Vignesh's Neighbour-Hood </h1>
+         </div>
+      </div>
+
+      <div class="row-subHead">
+         <div class="column-subHead">
+            <h2>Famous Places in Madurai</h2>
+            <hr>
+         </div>
+         <div class="mobile-nav">
+            <div class="menu-btn" id="menu-btn">
+               <div></div>
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+         </div>
+      </div>
+      <div class ="row-map">
+      <div class="column-map">
+         <input type="text" class="loc-Googler" data-bind="textInput: inputLoc" placeholder="Enter the location..">
+         <div id="list">
+            <ul class = "responsive-menu" data-bind="foreach: locSearch">
+               <li data-bind="text: title, click: $parent.clickOver"></li>
+            </ul>
+         </div>
+      </div>
+      <div class="column-map">
+         <div id="map" class="map"></div>
+      </div>
+
+      <script onerror="googleAlert()" async defer src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry,drawing&key=AIzaSyDdFURpBqjMOYF4RriYdK3Jxb39QpKHbpk&callback=initMap"></script>
+      <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+      <script src="js/knockout-3.4.1.js"></script>
+      <script src="js/main_min.js"></script>
+
+   </body>
+
+</html>
